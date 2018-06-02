@@ -33,7 +33,7 @@ export class PostService {
       }));
   }
 
-  createPost(post: Post) {
+  addPost(post: Post) {
     this.db.collection<Post>('posts').add(post);
   }
 
