@@ -7,6 +7,7 @@ import {PostService} from '../../services/post.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
+
 export class CreateComponent implements OnInit {
 
   form: FormGroup;

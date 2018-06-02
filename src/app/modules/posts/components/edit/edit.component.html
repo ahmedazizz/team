@@ -1,3 +1,40 @@
-<p>
-  edit works!
-</p>
+<div class="panel" *ngIf="form">
+  <div class="panel-heading">
+    Edit {{ form.get('name').value}}
+  </div>
+  <div class="panel-body">
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <div class="form-group" [ngClass]="getClasses('title')">
+        <div class="control-label">Name</div>
+        <input type="text" class="form-control" formControlName="title">
+        <div class="help-block" *ngIf="getClasses('title')['has-error']">
+          this field is required
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('content')">
+        <div class="control-label">Content</div>
+        <textarea rows="6" formControlName="content" class="form-control"></textarea>
+        <div class="help-block" *ngIf="getClasses('content')['has-error']">
+          this field is required
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('rate')">
+        <div class="control-label">Rate</div>
+        <input type="number" class="form-control" formControlName="rate">
+        <div class="help-block" *ngIf="getClasses('rate')['has-error']">
+          this field is required
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('created_at')">
+        <div class="control-label">Created At</div>
+        <input type="date" class="form-control" formControlName="created_at">
+        <div class="help-block" *ngIf="getClasses('created_at')['has-error']">
+          this field is required
+        </div>
+      </div>
+
+      <button class="btn btn-success" type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+
+  </div>
+</div>

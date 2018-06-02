@@ -4,10 +4,10 @@
   </div>
   <div class="panel-body">
     <form (ngSubmit) = "submit()" [formGroup] = "form">
-      <div class="form-group" [ngClass]="getClasses('name')">
-        <div class="control-label">Name</div>
+      <div class="form-group" [ngClass]="getClasses('title')">
+        <div class="control-label">Title</div>
         <input type="text" class="form-control" formControlName="title">
-        <div class="help-block" *ngIf="getClasses('name')['has-error']">
+        <div class="help-block" *ngIf="getClasses('title')['has-error']">
           This field is required.
         </div>
       </div>

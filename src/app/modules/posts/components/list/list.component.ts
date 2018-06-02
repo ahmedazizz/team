@@ -1,4 +1,7 @@
+import { Post } from './../../interfaces/post';
+import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+posts: Observable<Post[]>;
 
-  ngOnInit() {
-  }
+  constructor(private service: PostService) { }
+
+  ngOnInit() {}
+
+  gitlist() {}
 
 }
