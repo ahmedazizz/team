@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-Post: string;
+posts: Post[];
 
   constructor(private service: PostService) { }
 
