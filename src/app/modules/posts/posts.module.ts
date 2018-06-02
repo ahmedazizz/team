@@ -5,10 +5,11 @@ import { ListComponent } from './components/list/list.component';
 import {PostService} from './services/post.service';
 import {EditComponent} from './components/edit/edit.component';
 import {CreateComponent} from './components/create/create.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, ReactiveFormsModule
   ],
   providers: [PostService],
   declarations: [SingleComponent, ListComponent, EditComponent, CreateComponent]

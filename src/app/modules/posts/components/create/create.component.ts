@@ -32,7 +32,7 @@ export class CreateComponent implements OnInit {
   }
 
   submit() {
-    this.service.createPost(this.form.value);
+    this.service.addPost(this.form.value);
   }
 
 

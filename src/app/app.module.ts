@@ -9,6 +9,7 @@ import {UserModule} from './modules/user/user.module';
 import {ProfileModule} from './modules/profile/profile.module';
 import {RouterModule} from '@angular/router';
 import {ApplicationRoutes} from './app.routes';
+import {AngularFirestore} from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {ApplicationRoutes} from './app.routes';
     ProfileModule,
     RouterModule.forRoot(ApplicationRoutes)
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule {
