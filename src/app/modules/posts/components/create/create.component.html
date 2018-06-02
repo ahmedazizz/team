@@ -1,0 +1,40 @@
+<div class="panel">
+  <div class="panel-heading">
+    Create a new post
+  </div>
+  <div class="panel-body">
+    <form (ngSubmit) = "submit()" [formGroup] = "form">
+      <div class="form-group" [ngClass]="getClasses('name')">
+        <div class="control-label">Name</div>
+        <input type="text" class="form-control" formControlName="title">
+        <div class="help-block" *ngIf="getClasses('name')['has-error']">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('content')">
+        <div class="control-label">Content</div>
+        <textarea rows="6" class="form-control" formControlName="content"></textarea>
+        <div class="help-block" *ngIf="getClasses('content')['has-error']">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('rate')">
+        <div class="control-label">Rate</div>
+        <input type="number" class="form-control" formControlName="rate">
+        <div class="help-block" *ngIf="getClasses('rate')['has-error']">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="getClasses('created_at')">
+        <div class="control-label">Created at</div>
+        <input type="date" class="form-control" formControlName="created_at">
+        <div class="help-block" *ngIf="getClasses('created_at')['has-error']">
+          This field is required.
+        </div>
+      </div>
+
+      <button class="btn btn-success" type="submit" [disabled]="!form.valid">Create</button>
+    </form>
+
+  </div>
+</div>
