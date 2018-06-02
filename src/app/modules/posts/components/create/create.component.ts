@@ -7,6 +7,7 @@ import {PostService} from '../../services/post.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
+
 export class CreateComponent implements OnInit {
 
   form: FormGroup;
@@ -31,7 +32,7 @@ export class CreateComponent implements OnInit {
   }
 
   submit() {
-    this.service.addPost(this.form.value);
+    this.service.createPost(this.form.value);
   }
 
 
