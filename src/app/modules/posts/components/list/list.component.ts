@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ListComponent implements OnInit {
 
-posts: Observable<Post>;
+posts: Observable<Post[]>;
 
   constructor(private service: PostService) { }
 
