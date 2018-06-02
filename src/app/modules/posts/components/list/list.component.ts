@@ -1,3 +1,5 @@
+import { Post } from './../../interfaces/post';
+import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+Post: string;
 
-  ngOnInit() {
-  }
+  constructor(private service: PostService) { }
+
+  ngOnInit() {}
+
+  gitlist() {}
 
 }
