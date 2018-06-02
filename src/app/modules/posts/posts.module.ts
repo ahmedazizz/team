@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SingleComponent } from './components/single/single.component';
 import { ListComponent } from './components/list/list.component';
-import { CreateComponent } from './components/create/create.component';
-import { EditComponent } from './components/edit/edit.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {PostService} from './services/post.service';
 
 @NgModule({
   imports: [
-    CommonModule, ReactiveFormsModule
+    CommonModule
   ],
-  declarations: [SingleComponent, ListComponent, CreateComponent, EditComponent]
+  providers: [PostService],
+  declarations: [SingleComponent, ListComponent]
 })
 export class PostsModule { }
